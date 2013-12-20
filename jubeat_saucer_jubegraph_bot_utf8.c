@@ -1,5 +1,5 @@
 /*
-This software is released under the  BSD (3-Clause) License, see LICENSE.txt.
+This software is released under the  BSD (3-Clause) License, see LICENSE.
 */
 #include <stdio.h>
 #include <string.h>
