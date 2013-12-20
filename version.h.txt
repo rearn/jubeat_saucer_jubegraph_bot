@@ -1,0 +1,7 @@
+#ifndef VERSION_H
+#define VERSION_H
+
+#define JSJB_VERSION "v0.9"
+#define JSJB_NON_GIT
+
+#endif /* #ifndef VERSION_H */
