@@ -19,15 +19,15 @@ This software is released under the  BSD (3-Clause) License, see LICENSE.
 
 #include "version.h"
 
-#define FILE_MAX 6
+#define FILE_MAX 11
 #define BUF_LEN 256                      /* バッファのサイズ */
 #define BOT_UA "User-Agent: Opera/9.80 (Windows NT 6.1; U; ja) Presto/2.10.289 Version/12.02"
 #define BOT_UA2 "User-Agent: rearnbot/0.9 (+https://twitter.com/rearn499)"
 #define print_line( msg ) fprintf(stderr,"%s, %d: %s\n",__FILE__,__LINE__,msg)
 
 const char *ea_user = "KID=username&pass=passwd&OTP=";	// ※ユーザ名とパスワードを指定
-const char *name[] = {"playerData", "musicData1", "musicData2", "musicData3", "musicData4", "musicData5",};
-const char *filename[] = {"0.html", "1.html", "2.html", "3.html", "4.html", "5.html",};
+const char *name[] = {"playerData", "musicData1", "musicData2", "musicData3", "musicData4", "musicData5", "musicData6", "musicData7", "musicData8", "musicData9", "musicData10",};
+const char *filename[] = {"0.html", "1.html", "2.html", "3.html", "4.html", "5.html", "6.html", "7.html", "8.html", "9.html", "10.html",};
 const char *form_date[] = {"Content-Disposition: form-data; name=\"", "\"; filename=\"", "\"\r\nContent-Type: text/html\r\n\r\n"};
 
 
@@ -509,9 +509,14 @@ int main(int argc, char *argv[]) {
 		"/game/jubeat/saucer/p/playdata/music.html?page=3",
 		"/game/jubeat/saucer/p/playdata/music.html?page=4",
 		"/game/jubeat/saucer/p/playdata/music.html?page=5",
+		"/game/jubeat/saucer/p/playdata/music.html?page=6",
+		"/game/jubeat/saucer/p/playdata/music.html?page=7",
+		"/game/jubeat/saucer/p/playdata/music.html?page=8",
+		"/game/jubeat/saucer/p/playdata/music.html?page=9",
+		"/game/jubeat/saucer/p/playdata/music.html?page=10",
 	};
 	char up_host[BUF_LEN] = "jubegraph.dyndns.org";
-	char up_path[BUF_LEN] = "/jubeat_saucer/registFile.cgi";
+	char up_path[BUF_LEN] = "/jubeat_saucerfulfill/registFile.cgi";
 	
 #ifdef JSJB_NON_GIT
 	fprintf(stderr, "jsjb (%s) build: %s %s\n", JSJB_VERSION, __DATE__, __TIME__);
@@ -577,7 +582,7 @@ int main(int argc, char *argv[]) {
 		fclose(fp);
 		close(s);
 		
-		sleep(15);
+		sleep(1);
 		
 /*		while (1){
 			if(fgets(buf, sizeof(buf), fp) == NULL ){
@@ -677,11 +682,11 @@ int main(int argc, char *argv[]) {
 	}
 
 	fprintf(fp,
-"POST /jubeat_saucer/registData.cgi HTTP/1.0\r\n"
+"POST /jubeat_saucerfulfill/registData.cgi HTTP/1.0\r\n"
 "Host: %s\r\n"
 "%s\r\n"
 "Content-Type: application/x-www-form-urlencoded\r\n"
-"Referer: http://jubegraph.dyndns.org/jubeat_saucer/registFile.cgi\r\n"
+"Referer: http://jubegraph.dyndns.org/jubeat_saucerfulfill/registFile.cgi\r\n"
 "Content-Length: %d\r\n"
 "\r\n"
 "rid=%s&time=%s&submit=%%E3%%83%%87%%E3%%83%%BC%%E3%%82%%BF%%E7%%99%%BB%%E9%%8C%%B2\r\n",
