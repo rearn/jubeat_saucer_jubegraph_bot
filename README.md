@@ -1,6 +1,11 @@
 jubeat_saucer_jubegraph_bot
 ===========================
 
+注意
+---------------------------
+現在[jubegraph](http://jubegraph.dyndns.org/jubeat_saucer/)のサービス終了し、
+[KONAMI](http://p.eagate.573.jp/)のログイン方法を変更されたため利用できません。
+
 はじめに
 ---------------------------
 このソフトは、[jubegraph](http://jubegraph.dyndns.org/jubeat_saucer/)に自動でアップデートするために開発したソフトです。
